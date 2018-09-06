@@ -1,0 +1,248 @@
+\documentclass[tikz,border=5mm]{standalone}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xcolor}
+
+\begin{document}
+
+    \definecolor{darkblue}{HTML}{182f5b}
+    \definecolor{darkbrown}{HTML}{4c331f}
+    \definecolor{lightturquoise}{HTML}{A4E7C4}
+    \definecolor{darkturquoise}{HTML}{02A47F}	
+    \definecolor{morelightturquoise}{HTML}{00C482} 	
+    \definecolor{morelightturquoise74D6A5}{HTML}{74D6A5}
+    \definecolor{brilho}{HTML}{FFFFFF}
+    \definecolor{detalheboca}{HTML}{04B982}
+    \definecolor{darkyellow}{HTML}{F6CB31}
+    \definecolor{yellow}{HTML}{F1E76E}
+    \definecolor{blue}{HTML}{0AA5DB}
+    \definecolor{green}{HTML}{03CC2E}
+    \definecolor{red}{HTML}{FC2642}
+    \definecolor{corpo}{HTML}{5AC8AD}
+    \definecolor{rosto}{HTML}{A9E8CB}
+        
+            \begin{tikzpicture}
+                
+                \newlength \imagewidth
+                \newlength \imagescale
+
+                \pgfmathsetlength{\imagewidth}{10cm}
+
+                \pgfmathsetlength{\imagescale}{\imagewidth/100}
+                
+                \begin{figure}
+                
+                    
+                    \node[anchor=center, inner sep=0pt, outer sep=0pt] at(0,0) {\includegraphics[width=11500=\imagewidth]{bmo50.jpg}};
+                        
+                    \draw [step = 8.11cm, help lines] (-204.27,-279) grid (204.27,279)
+                        
+                \end{figure}
+                
+                \fill (-203, 267.5) rectangle (-194.5, -267.5); 
+                \fill (-195, 275.5) rectangle (195, 266.9); 
+                \fill (203, -267.5) rectangle (194.5, 267.5); 
+                \fill (195, -275.5) rectangle (-195, -266.9); 
+                
+                \fill [lightturquoise] (-186.5, 266.8) rectangle (185.5, 259.8); 
+                \fill [lightturquoise] (-194.5, 259.8) rectangle (-185.5, 251.5); 
+                \fill [lightturquoise] (194.5, 259.8) rectangle (185.5, 251.5); 
+                \fill [darkturquoise] (-194.5, 266.9) rectangle (-186.5, 259.8); 
+                \fill [darkturquoise] (194.5, 266.8) rectangle (185.5, 259.8); 
+                \fill [darkturquoise] (-194.5, -266.8) rectangle (-186.5, -259.8); 
+                \fill [darkturquoise] (194.5, -266.8) rectangle (186.5, -259.8); 
+                
+                \fill [corpo] (-194.5, 251.5) rectangle (-185.0, -259.8); 
+                \fill [corpo] (-162.0, -24.3) rectangle (186.0, -245.5); 
+                \fill [corpo] (194.5, 251.5) rectangle (185.0, -259.8); 
+                \fill [corpo] (-186.5, -266.8) rectangle (186.4, -259.8);
+                \fill [corpo] (-186.5, 251.0) rectangle (185.5, 259.8); 
+                \fill [corpo] (-154.0, 251.5) rectangle (-185.8, -259.9); 
+                \fill [corpo] (-156.0, 227.1) rectangle (185.8, 259.8); 
+                \fill [corpo] (154.0, -0.1) rectangle (185.8, 259.8); 
+                \fill [corpo] (-185.0, 16.1) rectangle (185.8, -0.1);
+                \fill [corpo] (-185.0, -60.9) rectangle (185.8, -24.3); 
+                \fill [corpo] (105.5, 1.0) rectangle (129.5, -25.0); 
+                \fill [corpo] (145.9, 1.0) rectangle (185.8, -25.0); 
+                
+                \fill [corpo] (-185.0, -242.5) rectangle (185.8, -266.8);
+                
+                \fill (-145.9, 227.1) rectangle (145.9, 219.0); 
+                \fill (-145.9, 16.1) rectangle (145.9, 24.5); 
+                \fill (-154.0, 219.1) rectangle (-145.9, 24.3); 
+                \fill (154.0, 219.1) rectangle (145.9, 24.3); 
+                
+                \fill [rosto] (-145.9, 219.0) rectangle (145.9, 24.5); 
+                
+                \fill [darkturquoise] (-153.9, 227.1) rectangle (-145.9, 219.0); 
+                \fill [darkturquoise] (153.9, 227.1) rectangle (145.9, 219.0);
+                \fill [darkturquoise] (-153.9, 24.5) rectangle (-145.9, 16.0); 
+                \fill [darkturquoise] (153.9, 24.5) rectangle (145.9, 16.0); 
+                
+                \fill [morelightturquoise] (-145.8, 219.0) rectangle (-136.9, 210.0); 
+                \fill [morelightturquoise] (145.8, 219.0) rectangle (136.9, 210.0); 
+                \fill [morelightturquoise] (-145.8, 24.6) rectangle (-136.9, 32.5); 
+                \fill [morelightturquoise] (145.8, 24.6) rectangle (136.9, 32.5); 
+                
+                \fill [morelightturquoise74D6A5] (-136.9, 219.0) rectangle (136.9, 210.0); 
+                \fill [morelightturquoise74D6A5] (-136.9, 24.6) rectangle (136.9, 32.5); 
+                \fill [morelightturquoise74D6A5] (-145.8, 210.0) rectangle (-136.9, 32.5);
+                \fill [morelightturquoise74D6A5] (145.8, 210.0) rectangle (136.9, 32.5); 
+                
+                \fill [brilho] (127.8, 202.0) rectangle (103.9, 177.5); 
+                \fill [brilho] (94.8, 202.0) rectangle (103.9, 185.5); 
+                
+                \fill (-145.9, -0.1) rectangle (105.5, -16.3);
+                
+                \fill [darkturquoise] (-145.9, -0.1) rectangle (-154.0, -16.3); 
+                \fill [darkturquoise] (105.4, -0.1) rectangle (113.5, -16.3); 
+                \fill [brilho] (-154.0, -16.5) rectangle (113.5, -24.3); 
+                
+                \fill [darkblue] (145.9, -0.1) rectangle (129.5, -16.3);
+                \fill [brilho] (145.9, -16.5) rectangle (129.5, -24.3);
+              
+                \fill (-97.4, 162.3) rectangle (-81.1, 146.0);
+                \fill (89.4, 162.3) rectangle (72.8, 146.0);
+                
+                \fill (-36.4, 144.8) rectangle (-20.0, 153.0); 
+                \fill (30.4, 144.8) rectangle (13.0, 153.0); 
+                \fill (-20.0, 136.8) rectangle (13.0, 145.0);
+                \fill (-36.4, 128.0) rectangle (-45.0, 145.0); 
+                \fill (38.4, 128.0) rectangle (30.0, 145.0); 
+                \fill (-28.4, 120.0) rectangle (-36.4, 128.0); 
+                \fill (21.0, 120.0) rectangle (30.0, 128.0); 
+                \fill (-28.4, 112.0) rectangle (21.0, 120.0);
+                
+                \fill [detalheboca] (-45.1, 144.8) rectangle (-36.5, 153.0); 
+                \fill [detalheboca] (-45.1, 120.0) rectangle (-36.5, 128.0); 
+                \fill [detalheboca] (30.0, 144.8) rectangle (38.4, 153.0);
+                \fill [detalheboca] (30.0, 120.0) rectangle (38.4, 128.0); 
+                
+                \fill [detalheboca] (-36.4, 128.0) rectangle (-20.0, 145.0); 
+                \fill [detalheboca] (30.0, 128.0) rectangle (13.0, 145.0); 
+                \fill [detalheboca] (-20.5, 128.0) rectangle (13.5, 136.8); 
+                \fill [detalheboca] (-20.0, 120.0) rectangle (-28.4, 128.5);
+                \fill [detalheboca] (12.8, 120.0) rectangle (21.0, 128.5); 
+                
+                \fill (-111.0, -78.0) rectangle (-77.5, -86.0); 
+                \fill (-111.0, -86.0) rectangle (-119.0, -119.0);
+                \fill (-77.5, -86.0) rectangle (-69.5, -119.0); 
+                \fill (-111.0, -110.5) rectangle (-143.5, -119.0); 
+                \fill (-45.0, -110.5) rectangle (-70.5, -119.0);
+                \fill (-143.5, -119.0) rectangle (-152.0, -152.0); 
+                \fill (-45.0, -119.0) rectangle (-36.5, -152.0); 
+                
+                \fill (-143.5, -152.0) rectangle (-111.0, -160.5); 
+                \fill (-45.0, -152.0) rectangle (-70.5, -160.5); 
+                \fill (-111.0, -152.0) rectangle (-119.0, -185.0); 
+                \fill (-77.5, -152.0) rectangle (-69.5, -185.0); 
+                \fill (-111.0, -193.5) rectangle (-77.5, -185.0); 
+                
+                \fill [darkturquoise] (-111.0, -78.0) rectangle (-119.0, -86.0); 
+                \fill [darkturquoise] (-77.5, -78.0) rectangle (-69.5, -86.0); 
+                \fill [darkturquoise] (-143.5, -110.5) rectangle (-152.0, -119.0); 
+                \fill [darkturquoise] (-143.5, -152.1) rectangle (-152.0, -161.0);
+                \fill [darkturquoise] (-152.0, -160.5) rectangle (-119.0, -168.0); 
+                \fill [darkturquoise] (-45.0, -110.5) rectangle (-36.5, -119.0); 
+                \fill [darkturquoise] (-45.0, -152.1) rectangle (-36.5, -161.0); 
+                \fill [darkturquoise] (-36.5, -160.5) rectangle (-69.5, -168.0);
+                \fill [darkturquoise] (-111.0, -194.5) rectangle (-119.0, -185.0); 
+                \fill [darkturquoise] (-77.5, -194.5) rectangle (-69.5, -185.0); 
+                \fill [darkturquoise] (-119.0, -200.5) rectangle (-69.5, -193.4); 
+                
+                \fill [brilho] (-111.0, -86.0) rectangle (-77.5, -94.0); 
+                \fill [brilho] (-111.0, -119.0) rectangle (-143.5, -127.0); 
+                \fill [brilho] (-45.0, -119.0) rectangle (-77.5, -127.0);
+                \fill [darkyellow] (-110.0, -128.0) rectangle (-77.5, -143.0); 
+                \fill [darkyellow] (-100.5, -129.0) rectangle (-87.5, -119.0); 
+                \fill [darkyellow] (-100.5, -142.0) rectangle (-87.5, -152.0); 
+
+                \fill [yellow] (-111.0, -94.0) rectangle (-77.5, -119.0); 
+                \fill [yellow] (-111.0, -185.0) rectangle (-77.5, -152.0); 
+                \fill [yellow] (-110.0, -152.0) rectangle (-143.5, -127.0); 
+                \fill [yellow] (-45.0, -152.0) rectangle (-77.5, -127.0); 
+                \fill [yellow] (-111.0, -128.0) rectangle (-100.5, -118.0); 
+                \fill [yellow] (-111.0, -152.0) rectangle (-100.5, -143.0); 
+                \fill [yellow] (-87.5, -128.0) rectangle (-77.5, -118.0); 
+                \fill [yellow] (-87.5, -152.0) rectangle (-77.5, -143.0); 
+
+                \fill (-152.0, -233.5) rectangle (-110.5, -217.0); 
+                \fill (-53.0, -233.5) rectangle (-93.5, -217.0);
+                \fill [brilho] (-152.0, -242.5) rectangle (-110.5, -233.5); 
+                \fill [brilho] (-53.0, -242.5) rectangle (-93.5, -233.5); 
+                
+                \fill (62.0, -60.9) rectangle (54.0, -69.5); 
+                \fill (46.0, -69.0) rectangle (54.2, -77.5); 
+                \fill (61.5, -69.0) rectangle (69.8, -77.5);
+                \fill (46.0, -77.5) rectangle (37.8, -85.8); 
+                \fill (70.0, -77.5) rectangle (78.0, -85.8); 
+                \fill (29.0, -105.5) rectangle (37.8, -85.8); 
+                \fill (86.5, -105.5) rectangle (78.0, -85.8); 
+                \fill (86.5, -110.0) rectangle (29.0, -102.0); 
+                
+                \fill [darkturquoise] (46.0, -60.9) rectangle (54.0, -69.5); 
+                \fill [darkturquoise] (61.5, -60.9) rectangle (69.8, -69.5); 
+                \fill [darkturquoise] (46.0, -69.2) rectangle (37.8, -77.5); 
+                \fill [darkturquoise] (69.7, -69.2) rectangle (78.0, -77.5);
+                \fill [darkturquoise] (29.0, -85.8) rectangle (37.8, -77.5);
+                \fill [darkturquoise] (86.5, -85.8) rectangle (78.0, -77.5); 
+                \fill [darkturquoise] (86.5, -110.0) rectangle (29.0, -117.9); 
+                
+                \fill [brilho] (61.5, -77.8) rectangle (54.2, -69.5); 
+                \fill [brilho] (46.0, -77.5) rectangle (54.2, -85.8); 
+                \fill [brilho] (61.5, -77.5) rectangle (70.0, -85.8); 
+                \fill [brilho] (46.0, -93.8) rectangle (37.8, -85.8); 
+                \fill [brilho] (70.0, -93.8) rectangle (78.0, -85.8); 
+                \fill [blue] (54.2, -77.5) rectangle (61.5, -86.0);
+                \fill [blue] (46.0, -94.0) rectangle (70.0, -85.8); 
+                \fill [blue] (37.8, -102.0) rectangle (78.0, -93.8); 
+                
+                \fill (127.5, -110.5) rectangle (152.5, -102.5); 
+                \fill (127.5, -159.8) rectangle (152.5, -152.0); 
+                \fill (127.5, -110.5) rectangle (119.5, -119.0); 
+                \fill (160.5, -110.5) rectangle (152.5, -119.0); 
+                \fill (127.5, -143.5) rectangle (119.5, -152.0); 
+                \fill (160.5, -143.5) rectangle (152.5, -152.0); 
+                \fill (119.5, -143.5) rectangle (111.5, -119.0); 
+                \fill (160.5, -143.5) rectangle (168.5, -119.0); 
+                
+                \fill [darkturquoise] (119.5, -152.0) rectangle (111.5, -143.5); 
+                \fill [darkturquoise] (160.5, -152.0) rectangle (168.5, -143.5); 
+                \fill [darkturquoise] (127.5, -159.8) rectangle (119.5, -152.0); 
+                \fill [darkturquoise] (160.5, -159.8) rectangle (152.5, -152.0); 
+                \fill [darkturquoise] (127.5, -159.8) rectangle (152.5, -167.2); 
+                
+                \fill [brilho] (127.5, -110.5) rectangle (152.5, -119.0);
+                \fill [brilho] (127.5, -126.5) rectangle (119.5, -119.0); 
+                \fill [brilho] (160.5, -126.5) rectangle (152.5, -119.0);
+                
+                \fill [green] (127.5, -126.8) rectangle (152.5, -119.0); 
+                \fill [green] (119.5, -126.5) rectangle (160.5, -143.5); 
+                \fill [green] (127.5, -152.0) rectangle (152.5, -143.3); 
+                
+                \fill (86.5, -143.0) rectangle (54.0, -151.5); 
+                \fill (86.5, -209.0) rectangle (54.0, -201.0); 
+                \fill (54.0, -151.5) rectangle (45.5, -160.0); 
+                \fill (54.0, -201.0) rectangle (45.5, -192.5); 
+                \fill (86.5, -151.5) rectangle (95.0, -160.0); 
+                \fill (86.5, -201.0) rectangle (95.0, -192.5); 
+                \fill (45.5, -192.8) rectangle (37.5, -160.0); 
+                \fill (94.8, -192.8) rectangle (103.0, -160.0); 
+                
+                \fill [darkturquoise] (45.5, -201.0) rectangle (37.5, -192.5); 
+                \fill [darkturquoise] (94.8, -201.0) rectangle (103.0, -192.5); 
+                \fill [darkturquoise] (54.0, -209.0) rectangle (45.5, -201.0); 
+                \fill [darkturquoise] (86.5, -209.0) rectangle (95.0, -201.0); 
+                \fill [darkturquoise] (86.5, -209.0) rectangle (54.0, -216.5); 
+                
+                \fill [brilho] (86.5, -160.0) rectangle (54.0, -151.5); 
+                \fill [brilho] (45.5, -160.0) rectangle (54.0, -168.0); 
+                \fill [brilho] (86.5, -160.0) rectangle (94.5, -168.0); 
+                
+                \fill [red] (86.5, -160.0) rectangle (54.0, -168.6);
+                \fill [red] (45.5, -192.5) rectangle (94.6, -168.0);
+                \fill [red] (86.5, -201.0) rectangle (54.0, -192.0); 
+            
+        \end{tikzpicture}
+        
+\end{document}
