@@ -1,0 +1,365 @@
+\documentclass[tikz,border=5mm]{standalone}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xcolor}
+
+\begin{document}
+
+    %definindo novas cores
+    \definecolor{darkblue}{HTML}{182f5b}
+    \definecolor{darkbrown}{HTML}{4c331f}
+    \definecolor{lightturquoise}{HTML}{A4E7C4}
+    \definecolor{darkturquoise}{HTML}{02A47F}	
+    \definecolor{morelightturquoise}{HTML}{00C482} 	
+    \definecolor{morelightturquoise74D6A5}{HTML}{74D6A5}
+    \definecolor{brilho}{HTML}{FFFFFF}
+    \definecolor{detalheboca}{HTML}{04B982}
+    \definecolor{darkyellow}{HTML}{F6CB31}
+    \definecolor{yellow}{HTML}{F1E76E}
+    \definecolor{yellow2}{HTML}{FEF93D}
+    \definecolor{blue}{HTML}{0AA5DB}
+    \definecolor{green}{HTML}{03CC2E}
+    \definecolor{red}{HTML}{FC2642}
+    \definecolor{corpo}{HTML}{5AC8AD}
+    \definecolor{roxo}{HTML}{3C2786}
+    \definecolor{darkbluebug}{HTML}{161FD2}
+    \definecolor{lightbluebug}{HTML}{03E1E4}
+    \definecolor{greenbug}{HTML}{00EB2E}
+    \definecolor{pinkbug}{HTML}{FE54E8}
+            
+        %\begin{figure}
+        
+            \begin{tikzpicture}
+                
+                %definicao da largura e escala da imagem
+                \newlength \imagewidth
+                \newlength \imagescale
+
+                %tamanho da imagem na tela
+                \pgfmathsetlength{\imagewidth}{10cm}
+
+                %escala da imagem
+                \pgfmathsetlength{\imagescale}{\imagewidth/100}
+                
+                \begin{figure}
+                
+                        %\includegraphics{bmo50.jpg}
+                    
+                        \node[anchor=center, inner sep=0pt, outer sep=0pt] at(0,0) {\includegraphics[width=11500=\imagewidth]{BMO_Frame2.JPG}};
+                        
+                        %grid
+                        \draw [step = 8.11cm, help lines] (-204.27,-279) grid (204.27,279)
+                        
+                \end{figure}
+                
+                %borda corpo
+                \fill (-203, 267.5) rectangle (-194.5, -267.5); %esquerda
+                \fill (-195, 275.5) rectangle (195, 266.9); %cima
+                \fill (203, -267.5) rectangle (194.5, 267.5); %direita
+                \fill (195, -275.5) rectangle (-195, -266.9); %baixo
+                
+                %detalhes borda corpo
+                \fill [lightturquoise] (-186.5, 266.8) rectangle (185.5, 259.8); %cima
+                \fill [lightturquoise] (-194.5, 259.8) rectangle (-185.5, 251.5); %cima pequeno esquerda baixa
+                \fill [lightturquoise] (194.5, 259.8) rectangle (185.5, 251.5); %cima pequeno direita baixa
+                \fill [darkturquoise] (-194.5, 266.9) rectangle (-186.5, 259.8); %cima pequeno esquerda cima
+                \fill [darkturquoise] (194.5, 266.8) rectangle (185.5, 259.8); %cima pequeno direita cima
+                \fill [darkturquoise] (-194.5, -266.8) rectangle (-186.5, -259.8); %baixo pequeno esquerda
+                \fill [darkturquoise] (194.5, -266.8) rectangle (186.5, -259.8); %baixo pequeno direita
+                
+                %corpo
+                \fill [corpo] (-194.5, 251.5) rectangle (-185.0, -259.8); %borda esquerda
+                \fill [corpo] (-162.0, -24.3) rectangle (186.0, -245.5); %borda esquerda detalhe fundo
+                \fill [corpo] (194.5, 251.5) rectangle (185.0, -259.8); %borda direita
+                \fill [corpo] (-186.5, -266.8) rectangle (186.4, -259.8); %borda baixo
+                \fill [corpo] (-186.5, 251.0) rectangle (185.5, 259.8); %borda cima
+                \fill [corpo] (-154.0, 251.5) rectangle (-185.8, -259.9); %esquerda rosto
+                \fill [corpo] (-156.0, 227.1) rectangle (185.8, 259.8); %cima rosto
+                \fill [corpo] (154.0, -0.1) rectangle (185.8, 259.8); %direita rosto
+                \fill [corpo] (-185.0, 16.1) rectangle (185.8, -0.1); %baixo rosto
+                \fill [corpo] (-185.0, -60.9) rectangle (185.8, -24.3); %abaixo cartucho
+                \fill [corpo] (105.5, 1.0) rectangle (129.5, -25.0); %entre cartucho botão
+                \fill [corpo] (145.9, 1.0) rectangle (185.8, -25.0); %botão ao lado do cartucho
+                
+                \fill [corpo] (-185.0, -242.5) rectangle (185.8, -266.8); %baixo
+                
+                %borda rosto
+                \fill (-145.9, 227.1) rectangle (145.9, 219.0); %cima
+                \fill (-145.9, 16.1) rectangle (145.9, 24.5); %baixo
+                \fill (-154.0, 219.1) rectangle (-145.9, 24.3); %esquerda
+                \fill (154.0, 219.1) rectangle (145.9, 24.3); %direita
+                
+                %detalhes borda rosto
+                \fill [darkturquoise] (-153.9, 227.1) rectangle (-145.9, 219.0); %cima pequena esquerda fora
+                \fill [darkturquoise] (153.9, 227.1) rectangle (145.9, 219.0); %cima pequena direita fora
+                \fill [darkturquoise] (-153.9, 24.5) rectangle (-145.9, 16.0); %baixo pequena esquerda fora
+                \fill [darkturquoise] (153.9, 24.5) rectangle (145.9, 16.0); %baixo pequena direita fora
+                
+                \fill [morelightturquoise] (-145.8, 219.0) rectangle (-136.9, 210.0); %cima pequena esquerda dentro
+                \fill [morelightturquoise] (145.8, 219.0) rectangle (136.9, 210.0); %cima pequena direita dentro
+                \fill [morelightturquoise] (-145.8, 24.6) rectangle (-136.9, 32.5); %baixo pequena esquerda dentro
+                \fill [morelightturquoise] (145.8, 24.6) rectangle (136.9, 32.5); %baixo pequena direita dentro
+                
+                \fill [morelightturquoise74D6A5] (-136.9, 219.0) rectangle (136.9, 210.0); %cima dentro
+                \fill [morelightturquoise74D6A5] (-136.9, 24.6) rectangle (136.9, 32.5); %baixo dentro
+                \fill [morelightturquoise74D6A5] (-145.8, 210.0) rectangle (-136.9, 32.5); %esquerda dentro
+                \fill [morelightturquoise74D6A5] (145.8, 210.0) rectangle (136.9, 32.5); %direita dentro
+                
+                %bug
+                \fill [brilho] (-102.8, 210.0) rectangle (-136.9, 194.5); %branco
+                \fill [brilho] (-111.0, 186.5) rectangle (-136.9, 195.5); %branco
+                \fill [brilho] (-119.0, 187.5) rectangle (-136.9, 178.0); %branco
+                \fill [brilho] (-128.0, 153.0) rectangle (-136.9, 179.0); %branco
+                \fill [brilho] (-119.0, 154.0) rectangle (-136.9, 145.0); %branco
+                \fill [brilho] (-111.0, 128.5) rectangle (-136.9, 146.0); %branco
+                \fill [brilho] (-102.8, 129.5) rectangle (-136.9, 104.0); %branco
+                \fill [brilho] (-111.0, 87.5) rectangle (-136.9, 105.0); %branco
+                \fill (-111.0, 87.5) rectangle (-136.9, 77.5); %preto abaixo branco
+                \fill (-103.0, 70.5) rectangle (-136.9, 79.0); %preto abaixo branco
+                \fill (-95.0, 71.0) rectangle (-127.5, 62.0); %preto abaixo branco
+                \fill [yellow2] (-136.9, 71.0) rectangle (-127.5, 62.5); %amarelo lado esquerdo preto
+                \fill (-136.9, 46.0) rectangle (-119.5, 62.5); %preto abaixo branco amarelo
+                \fill [roxo] (-86.5, 45.5) rectangle (-119.5, 62.0); %roxo abaixo do preto
+                \fill [roxo] (-94.5, 46.0) rectangle (-136.9, 37.5); %roxo abaixo do preto
+                \fill [roxo] (-111.5, 32.5) rectangle (-136.9, 38.5); %roxo abaixo do preto
+                
+                \fill [yellow2] (-102.8, 210.0) rectangle (-61.9, 194.5); %amarelo
+                \fill [yellow2] (-111.0, 186.5) rectangle (-70.0, 195.5); %amarelo
+                \fill [yellow2] (-119.0, 187.5) rectangle (-78.5, 178.0); %amarelo
+                \fill [yellow2] (-128.0, 153.0) rectangle (-87.0, 179.0); %amarelo
+                \fill [yellow2] (-119.0, 154.0) rectangle (-78.0, 145.0); %amarelo
+                \fill [yellow2] (-111.0, 128.5) rectangle (-70.0, 146.0); %amarelo
+                \fill [yellow2] (-102.8, 129.5) rectangle (-61.9, 104.0); %amarelo
+                \fill [yellow2] (-111.8, 87.5) rectangle (-70.0, 105.0); %amarelo
+                \fill [darkbluebug] (-111.8, 77.5) rectangle (-70.0, 87.5); %azul abaixo do amarelo
+                \fill [darkbluebug] (-103.0, 70.5) rectangle (-61.9, 79.0); %azul abaixo do amarelo
+                \fill [darkbluebug] (-95.0, 71.0) rectangle (-53.0, 62.0); %azul abaixo do amarelo
+                \fill [brilho] (-86.5, 62.0) rectangle (-21.0, 45.5); %branco abaixo do azul
+                \fill [brilho] (-12.5, 54.0) rectangle (-22.0, 45.5); %branco abaixo do azul
+                \fill [brilho] (-94.5, 37.5) rectangle (-29.0, 46.5); %branco abaixo do azul
+                \fill [brilho] (-111.5, 38.5) rectangle (-37.0, 32.5); %branco abaixo do azul
+                
+                \fill [lightbluebug] (-61.9, 210.0) rectangle (-20.0, 194.5); %azul
+                \fill [lightbluebug] (-70.0, 186.5) rectangle (-29.0, 195.5); %azul
+                \fill [lightbluebug] (-78.5, 187.5) rectangle (-37.5, 178.0); %azul
+                \fill [lightbluebug] (-87.0, 153.0) rectangle (-45.5, 179.0); %azul
+                \fill [lightbluebug] (-78.5, 154.0) rectangle (-37.5, 145.0); %azul
+                \fill [lightbluebug] (-70.0, 128.5) rectangle (-29.0, 146.0); %azul
+                \fill [lightbluebug] (-61.9, 129.5) rectangle (-20.0, 104.0); %azul
+                \fill [lightbluebug] (-70.0, 87.5) rectangle (-29.0, 105.0); %azul
+                \fill [red] (-70.0, 77.5) rectangle (-29.0, 87.5); %vermelho abaixo do azul claro
+                \fill [red] (-61.9, 70.5) rectangle (-20.5, 79.0); %vermelho abaixo do azul claro
+                \fill [red] (-53.0, 71.0) rectangle (-12.5, 62.0); %vermelho abaixo do azul claro
+                \fill [roxo] (-21.0, 54.0) rectangle (29.0, 62.0); %roxo abaixo do vermelho
+                \fill [roxo] (-12.5, 55.0) rectangle (29.0, 45.5); %roxo abaixo do vermelho
+                \fill [roxo] (-29.0, 37.5) rectangle (20.0, 46.5); %roxo abaixo do vermelho
+                \fill [roxo] (-37.0, 38.5) rectangle (11.0, 32.5); %roxo abaixo do vermelho
+                
+                \fill [greenbug] (20.9, 210.0) rectangle (-20.0, 194.5); %verde
+                \fill [greenbug] (12.0, 186.5) rectangle (-29.0, 195.5); %verde
+                \fill [greenbug] (4.0, 187.5) rectangle (-37.5, 178.0); %verde
+                \fill [greenbug] (-4.0, 153.5) rectangle (-45.5, 179.0); %verde
+                \fill [greenbug] (4.0, 154.0) rectangle (-37.5, 145.0); %verde
+                \fill [greenbug] (12.0, 128.0) rectangle (-29.0, 146.0); %verde
+                \fill [greenbug] (20.9, 129.0) rectangle (-20.0, 104.0); %verde
+                \fill [greenbug] (12.9, 87.5) rectangle (-29.0, 105.0); %verde
+                \fill [pinkbug] (12.9, 77.5) rectangle (-29.0, 87.5); %rosa abaixo do verde
+                \fill [pinkbug] (20.9, 78.5) rectangle (-20.5, 70.5); %rosa abaixo do verde
+                \fill [pinkbug] (-12.5, 62.0) rectangle (29.5, 71.5); %rosa abaixo do verde
+                \fill (136.9, 62.0) rectangle (29.0, 45.5); %preto
+                \fill (110.5, 37.5) rectangle (20.0, 46.5); %preto
+                \fill (11.0, 38.5) rectangle (96.0, 32.5); %preto
+                \fill [roxo] (136.9, 37.5) rectangle (110.0, 46.5); %roxo do lado do preto
+                \fill [roxo] (136.9, 38.5) rectangle (96.0, 32.5); %roxo do lado do preto
+                
+                \fill [pinkbug] (20.9, 210.0) rectangle (62.0, 194.5); %rosa
+                \fill [pinkbug] (12.0, 186.5) rectangle (54.0, 195.5); %rosa
+                \fill [pinkbug] (4.0, 187.5) rectangle (46.0, 178.0); %rosa
+                \fill [pinkbug] (-4.0, 153.5) rectangle (38.0, 179.0); %rosa
+                \fill [pinkbug] (4.0, 154.5) rectangle (46.0, 145.0); %rosa
+                \fill [pinkbug] (12.0, 128.0) rectangle (54.0, 146.0); %rosa
+                \fill [pinkbug] (20.9, 129.0) rectangle (62.0, 104.0); %rosa
+                \fill [pinkbug] (12.0, 87.5) rectangle (54.0, 105.0); %rosa
+                \fill [greenbug] (12.0, 77.5) rectangle (54.0, 87.5); %verde abaixo do rosa
+                \fill [greenbug] (20.9, 78.5) rectangle (62.0, 70.5); %verde abaixo do rosa
+                \fill [greenbug] (29.5, 62.5) rectangle (70.0, 71.5); %verde abaixo do rosa
+                
+                \fill [red] (102.9, 210.0) rectangle (62.0, 194.5); %vermelho
+                \fill [red] (102.9, 186.0) rectangle (54.0, 195.5); %vermelho
+                \fill [red] (87.0, 187.0) rectangle (46.0, 178.5); %vermelho
+                \fill [red] (79.0, 153.0) rectangle (38.0, 179.5); %vermelho
+                \fill [red] (87.0, 154.0) rectangle (46.0, 145.0); %vermelho
+                \fill [red] (94.9, 128.0) rectangle (54.0, 146.0); %vermelho
+                \fill [red] (102.9, 129.0) rectangle (62.0, 104.0); %vermelho
+                \fill [red] (94.9, 87.5) rectangle (54.0, 105.0); %vermelho
+                \fill [lightbluebug] (94.9, 77.5) rectangle (54.0, 87.5); %azul abaixo do vermelho
+                \fill [lightbluebug] (104.0, 78.5) rectangle (62.0, 70.5); %azul abaixo do vermelho
+                \fill [lightbluebug] (70.0, 62.5) rectangle (111.0, 71.5); %azul abaixo do vermelho
+                
+                \fill [darkbluebug] (102.9, 210.0) rectangle (136.9, 86.5); %azul escuro
+                \fill [darkbluebug] (87.0, 187.0) rectangle (136.9, 178.5); %azul escuro
+                \fill [darkbluebug] (79.0, 153.0) rectangle (136.9, 179.5); %azul escuro
+                \fill [darkbluebug] (87.0, 154.0) rectangle (136.9, 145.5); %azul escuro
+                \fill [darkbluebug] (94.9, 146.0) rectangle (136.9, 128.0); %azul escuro
+                \fill [darkbluebug] (94.9, 86.5) rectangle (136.9, 105.0); %azul escuro
+                \fill [yellow2] (94.9, 77.5) rectangle (136.9, 87.5); %amarelo abaixo do azul escuro
+                \fill [yellow2] (104.0, 78.5) rectangle (136.9, 70.5); %amarelo abaixo do azul escuro
+                \fill [yellow2] (111.0, 62.5) rectangle (136.9, 71.5); %amarelo abaixo do azul escuro
+                
+                %detalhe brilho rosto
+                \fill [brilho] (127.8, 202.0) rectangle (103.9, 177.5); %brilho extrema direita
+                \fill [brilho] (94.8, 202.0) rectangle (104.9, 185.5); %continuação esquerda
+                
+                %cartucho
+                \fill (-145.9, -0.1) rectangle (105.5, -16.3);
+                
+                %detalhes do cartuho
+                \fill [darkturquoise] (-145.9, -0.1) rectangle (-154.0, -16.3); %direita
+                \fill [darkturquoise] (105.4, -0.1) rectangle (113.5, -16.3); %esquerda
+                \fill [brilho] (-154.0, -16.5) rectangle (113.5, -24.3); %baixo
+                
+                %botao ao lado do cartucho
+                \fill [darkblue] (145.9, -0.1) rectangle (129.5, -16.3);
+                \fill [brilho] (145.9, -16.5) rectangle (129.5, -24.3);
+                
+                %botões
+                %botão amarelo
+                \fill (-111.0, -78.0) rectangle (-77.5, -86.0); %cima
+                \fill (-111.0, -86.0) rectangle (-119.0, -119.0); %cima esquerda 
+                \fill (-77.5, -86.0) rectangle (-69.5, -119.0); %cima direita
+                \fill (-111.0, -110.5) rectangle (-143.5, -119.0); %cima esquerda baixa
+                \fill (-45.0, -110.5) rectangle (-70.5, -119.0); %cima direita baixa
+                \fill (-143.5, -119.0) rectangle (-152.0, -152.0); %cima esquerda meio
+                \fill (-45.0, -119.0) rectangle (-36.5, -152.0); %cima direita meio
+                
+                \fill (-143.5, -152.0) rectangle (-111.0, -160.5); %baixo esquerda cima
+                \fill (-45.0, -152.0) rectangle (-70.5, -160.5); %baixo direita baixa
+                \fill (-111.0, -152.0) rectangle (-119.0, -185.0); %baixo esquerda baixa
+                \fill (-77.5, -152.0) rectangle (-69.5, -185.0); %baixo direita
+                \fill (-111.0, -193.5) rectangle (-77.5, -185.0); %baixo
+                
+                %detalhes de fora do botão amarelo  
+                \fill [darkturquoise] (-111.0, -78.0) rectangle (-119.0, -86.0); %cima esquerda
+                \fill [darkturquoise] (-77.5, -78.0) rectangle (-69.5, -86.0); %cima direita
+                \fill [darkturquoise] (-143.5, -110.5) rectangle (-152.0, -119.0); %cima esquerda meio
+                \fill [darkturquoise] (-143.5, -152.1) rectangle (-152.0, -161.0); %baixo esquerda meio
+                \fill [darkturquoise] (-152.0, -160.5) rectangle (-119.0, -168.0); %baixo esquerda meio grande
+                \fill [darkturquoise] (-45.0, -110.5) rectangle (-36.5, -119.0); %cima direita meio
+                \fill [darkturquoise] (-45.0, -152.1) rectangle (-36.5, -161.0); %baixo direita meio
+                \fill [darkturquoise] (-36.5, -160.5) rectangle (-69.5, -168.0); %baixo direita meio grande
+                \fill [darkturquoise] (-111.0, -194.5) rectangle (-119.0, -185.0); %baixo esquerda
+                \fill [darkturquoise] (-77.5, -194.5) rectangle (-69.5, -185.0); %baixo direita
+                \fill [darkturquoise] (-119.0, -200.5) rectangle (-69.5, -193.4); %baixo esquerda grande
+                
+                %detalhes de dentro do botão amarelo
+                \fill [brilho] (-111.0, -86.0) rectangle (-77.5, -94.0); %brilho de cima
+                \fill [brilho] (-111.0, -119.0) rectangle (-143.5, -127.0); %brilho esquerda
+                \fill [brilho] (-45.0, -119.0) rectangle (-77.5, -127.0); %brilho direita
+                \fill [darkyellow] (-110.0, -128.0) rectangle (-77.5, -143.0); %quadrado
+                \fill [darkyellow] (-100.5, -129.0) rectangle (-87.5, -119.0); %quadrado cima
+                \fill [darkyellow] (-100.5, -142.0) rectangle (-87.5, -152.0); %quadrado baixo
+                
+                %botão amarelo dentro
+                \fill [yellow] (-111.0, -94.0) rectangle (-77.5, -119.0); %cima
+                \fill [yellow] (-111.0, -185.0) rectangle (-77.5, -152.0); %baixo
+                \fill [yellow] (-110.0, -152.0) rectangle (-143.5, -127.0); %esquerda
+                \fill [yellow] (-45.0, -152.0) rectangle (-77.5, -127.0); %direita
+                \fill [yellow] (-111.0, -128.0) rectangle (-100.5, -118.0); %cima esquerda pequena
+                \fill [yellow] (-111.0, -152.0) rectangle (-100.5, -143.0); %baixo esquerda pequena
+                \fill [yellow] (-87.5, -128.0) rectangle (-77.5, -118.0); %cima direita pequena
+                \fill [yellow] (-87.5, -152.0) rectangle (-77.5, -143.0); %baixo direita pequena
+                
+                %botões abaixo do amarelo
+                \fill (-152.0, -233.5) rectangle (-110.5, -217.0); %esquerda
+                \fill (-53.0, -233.5) rectangle (-93.5, -217.0); %direita
+                \fill [brilho] (-152.0, -242.5) rectangle (-110.5, -233.5); %esquerda
+                \fill [brilho] (-53.0, -242.5) rectangle (-93.5, -233.5); %direita
+                
+                %botão azul
+                \fill (62.0, -60.9) rectangle (54.0, -69.5); %cima
+                \fill (46.0, -69.0) rectangle (54.2, -77.5); %cima esquerda
+                \fill (61.5, -69.0) rectangle (69.8, -77.5); %cima direita
+                \fill (46.0, -77.5) rectangle (37.8, -85.8); %baixo esquerda
+                \fill (70.0, -77.5) rectangle (78.0, -85.8); %baixo direita
+                \fill (29.0, -105.5) rectangle (37.8, -85.8); %baixo esquerda longa
+                \fill (86.5, -105.5) rectangle (78.0, -85.8); %baixo direita longa
+                \fill (86.5, -110.0) rectangle (29.0, -102.0); %baixo
+                
+                %detalhes de fora do botão azul
+                \fill [darkturquoise] (46.0, -60.9) rectangle (54.0, -69.5); %cima esquerda
+                \fill [darkturquoise] (61.5, -60.9) rectangle (69.8, -69.5); %cima direita
+                \fill [darkturquoise] (46.0, -69.2) rectangle (37.8, -77.5); %meio esquerda
+                \fill [darkturquoise] (69.7, -69.2) rectangle (78.0, -77.5); %meio direita
+                \fill [darkturquoise] (29.0, -85.8) rectangle (37.8, -77.5); %baixo esquerda
+                \fill [darkturquoise] (86.5, -85.8) rectangle (78.0, -77.5); %baixo direita
+                \fill [darkturquoise] (86.5, -110.0) rectangle (29.0, -117.9); %baixo
+                
+                %botão azul dentro
+                \fill [brilho] (61.5, -77.8) rectangle (54.2, -69.5); %cima
+                \fill [brilho] (46.0, -77.5) rectangle (54.2, -85.8); %cima esquerda
+                \fill [brilho] (61.5, -77.5) rectangle (70.0, -85.8); %cima direita
+                \fill [brilho] (46.0, -93.8) rectangle (37.8, -85.8); %baixo esquerda
+                \fill [brilho] (70.0, -93.8) rectangle (78.0, -85.8); %baixo direita
+                \fill [blue] (54.2, -77.5) rectangle (61.5, -86.0); %cima
+                \fill [blue] (46.0, -94.0) rectangle (70.0, -85.8); %cima baixo
+                \fill [blue] (37.8, -102.0) rectangle (78.0, -93.8); %baixo
+                
+                %botão verde
+                \fill (127.5, -110.5) rectangle (152.5, -102.5); %cima
+                \fill (127.5, -159.8) rectangle (152.5, -152.0); %baixo
+                \fill (127.5, -110.5) rectangle (119.5, -119.0); %cima pequena esquerda
+                \fill (160.5, -110.5) rectangle (152.5, -119.0); %cima pequena direita
+                \fill (127.5, -143.5) rectangle (119.5, -152.0); %baixo pequena esquerda
+                \fill (160.5, -143.5) rectangle (152.5, -152.0); %baixo pequena direita
+                \fill (119.5, -143.5) rectangle (111.5, -119.0); %meio esquerda
+                \fill (160.5, -143.5) rectangle (168.5, -119.0); %meio direita
+                
+                %detalhes de fora do botão verde
+                \fill [darkturquoise] (119.5, -152.0) rectangle (111.5, -143.5); %baixo pequena esquerda meio
+                \fill [darkturquoise] (160.5, -152.0) rectangle (168.5, -143.5); %baixo pequena direita meio
+                \fill [darkturquoise] (127.5, -159.8) rectangle (119.5, -152.0); %baixo pequena esquerda
+                \fill [darkturquoise] (160.5, -159.8) rectangle (152.5, -152.0); %baixo pequena direita
+                \fill [darkturquoise] (127.5, -159.8) rectangle (152.5, -167.2); %baixo
+                
+                %brilho botão verde
+                \fill [brilho] (127.5, -110.5) rectangle (152.5, -119.0); %cima
+                \fill [brilho] (127.5, -126.5) rectangle (119.5, -119.0); %esquerda
+                \fill [brilho] (160.5, -126.5) rectangle (152.5, -119.0); %direita
+                
+                %botão verde dentro
+                \fill [green] (127.5, -126.8) rectangle (152.5, -119.0); %cima
+                \fill [green] (119.5, -126.5) rectangle (160.5, -143.5); %meio
+                \fill [green] (127.5, -152.0) rectangle (152.5, -143.3); %meio
+                
+                %botão vermelho
+                \fill (86.5, -143.0) rectangle (54.0, -151.5); %cima
+                \fill (86.5, -209.0) rectangle (54.0, -201.0); %baixo
+                \fill (54.0, -151.5) rectangle (45.5, -160.0); %cima pequena esquerda
+                \fill (54.0, -201.0) rectangle (45.5, -192.5); %baixo pequena esquerda
+                \fill (86.5, -151.5) rectangle (95.0, -160.0); %cima pequena direita
+                \fill (86.5, -201.0) rectangle (95.0, -192.5); %baixo pequena direita
+                \fill (45.5, -192.8) rectangle (37.5, -160.0); %esquerda
+                \fill (94.8, -192.8) rectangle (103.0, -160.0); %direita
+                
+                %detalhes de fora do botão vermelho
+                \fill [darkturquoise] (45.5, -201.0) rectangle (37.5, -192.5); %baixo pequena esquerda meio
+                \fill [darkturquoise] (94.8, -201.0) rectangle (103.0, -192.5); %baixo pequena direita meio
+                \fill [darkturquoise] (54.0, -209.0) rectangle (45.5, -201.0); %baixo pequena esquerda
+                \fill [darkturquoise] (86.5, -209.0) rectangle (95.0, -201.0); %baixo pequena direita
+                \fill [darkturquoise] (86.5, -209.0) rectangle (54.0, -216.5); %baixo
+                
+                %brilho botão vermelho
+                \fill [brilho] (86.5, -160.0) rectangle (54.0, -151.5); %cima
+                \fill [brilho] (45.5, -160.0) rectangle (54.0, -168.0); %esquerda
+                \fill [brilho] (86.5, -160.0) rectangle (94.5, -168.0); %direita
+                
+                %botão vermelho dentro
+                \fill [red] (86.5, -160.0) rectangle (54.0, -168.6); %cima
+                \fill [red] (45.5, -192.5) rectangle (94.6, -168.0); %meio
+                \fill [red] (86.5, -201.0) rectangle (54.0, -192.0); %baixo
+            
+        \end{tikzpicture}
+        
+    %\end{figure}
+    
+\end{document}
